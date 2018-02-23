@@ -1,0 +1,11 @@
+Em Repository:
+dotnet add package Microsoft.EntityFrameworkCore --version 2.0.1
+dotnet add package Microsoft.EntityFrameworkCore.Relational --version 2.0.1
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 2.0.1
+
+
+dotnet ef migrations add BancoInicial --startup-project ../senai.ifood.webapi/senai.ifood.webapi.csproj
+dotnet ef database update --startup-project ../senai.ifood.webapi/senai.ifood.webapi.csproj
+
+
+dotnet sln add "Senai.Ifood.Domain/Senai.Ifood.Domain.csproj";dotnet sln add "Senai.Ifood.Repository/Senai.Ifood.Repository.csproj";dotnet sln add "Senai.Ifood.WebApi/Senai.Ifood.WebApi.csproj"
