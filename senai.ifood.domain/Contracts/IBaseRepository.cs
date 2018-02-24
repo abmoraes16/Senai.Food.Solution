@@ -5,10 +5,11 @@ namespace senai.ifood.domain.Contracts
     //INTERFACE, onde T é uma classe
     public interface IBaseRepository<T> where T : class
     {
-        IEnumerable<T> Listar(); 
+        //= null <- se não passar nada também funciona
+        IEnumerable<T> Listar(string[] includes = null); 
         int Atualizar(T dados);
         int Inserir(T dados);
         int Deletar(T dados);
-        T BuscarPorId(int id);
+        T BuscarPorId(int id,string[] includes = null);
     }
 }
